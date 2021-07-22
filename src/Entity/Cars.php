@@ -121,6 +121,11 @@ class Cars
         return $this;
     }
 
+    public function __toString(): string
+    {
+        return $this->registration_number;
+    }
+
     /**
      * @return Collection|Booking[]
      */
