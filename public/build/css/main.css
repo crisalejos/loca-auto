@@ -21,3 +21,7 @@ body {
   .max-920 {
     max-width: 920px;
   }
+  .login{
+    max-width: 420px;
+    margin:25px auto;
+  }

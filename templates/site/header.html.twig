@@ -22,12 +22,35 @@
               <a title="Page Conditions" class="nav-link text-white" href="{{ path('conditions') }}">Conditions</a>
             </li>
             <li class="nav-item p-2">
-              <button class="btn btn-outline-success text-white btn-primary" type="submit"><i
+            {% if app.user %}
+							<button href="/login" class="btn btn-outline-success text-white btn-primary" type="submit"><i
                   class="bi bi-person-circle text-white"></i> Login</button>
+				  	{% else %}
+						  <button href="/logout" class="btn btn-outline-success text-white btn-primary" type="submit"><i
+                  class="bi bi-person-circle text-white"></i> Logout</button>
+			      {% endif %}
 
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+<!-- nav de connexion-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-p2">
+	    <div class="nav-wrapper">
+	    	<div class="container">
+	    		
+			      	
+			        
+			    {% if app.user %}
+						<p class=" text-white text-end">texte user </p>
+					{% else %}
+					  <p class=" text-white text-end">texte admin ? </p>
+			    {% endif %}
+		      	
+	    	</div>
+	    </div>
+  	</nav>
+    
   </header><!-- end header -->
